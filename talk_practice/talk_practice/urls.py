@@ -20,6 +20,7 @@ from blog.views import (
     get_post, 
     create_post,
     update_post,
+    delete_post,
 )
     
 
@@ -28,6 +29,7 @@ urlpatterns = [
     path('', post_list),
     path('single-post/<pk>/', get_post),
     path('create-post/', create_post),
-    path('single-post/<pk>/edit-post/', update_post)
+    path('single-post/<pk>/edit-post/', update_post),
+    path('single-post/<pk>/delete-post/', delete_post),
 ]
     

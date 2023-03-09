@@ -48,3 +48,9 @@ def update_post(request, pk):
         "form": form
     }
     return render(request, "edit-post.html", context)
+
+
+def delete_post(request, pk):
+    post = BlogPost.objects.get(id=pk)
+    post.delete()
+    return redirect('/')

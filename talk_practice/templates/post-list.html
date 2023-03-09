@@ -1,9 +1,19 @@
 {% for post in list %}
 
-{{post.tile}}
+<h1>
+    <a href="/single-post/{{ post.id }}/">
+        {{post.title}}  
+    </a>
+</h1>
+
+
+    <br>
 {{post.subtitle}}
+<br>
 {{post.author}}
+<br>
 {{post.date_updated}}
+<br>
 {{post.blog_content}}
 <br>
 

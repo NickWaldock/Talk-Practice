@@ -9,3 +9,11 @@ def post_list(request):
         "list": list
     }
     return render(request, "post-list.html", context)
+
+
+def get_post(request, pk):
+    post = BlogPost.objects.get(id=pk)
+    context = {
+        "post": post
+    }
+    return render(request, "single-post.html", context)

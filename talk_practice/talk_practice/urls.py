@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import post_list, get_post
+from blog.views import post_list, get_post, create_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', post_list),
     path('single-post/<pk>/', get_post),
+    path('create-post/', create_post),
 ]
     

@@ -32,3 +32,19 @@ def create_post(request):
         "form": form
     }
     return render(request, "create-post.html", context)
+
+
+def update_post(request, pk):
+    post = BlogPost.objects.get(id=pk)
+    form = BlogPostForm(instance=post)
+
+    if request.method == "POST":
+        form = BlogPostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {
+        "form": form
+    }
+    return render(request, "edit-post.html", context)

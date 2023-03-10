@@ -1,12 +1,11 @@
-{% for post in list %}
+{% extends "base.html" %}
 
-<h1>
+{% block content %}
+
+{% for post in list %}
     <a href="/single-post/{{ post.id }}/">
         {{post.title}}  
     </a>
-</h1>
-
-
     <br>
 {{post.subtitle}}
 <br>
@@ -18,3 +17,4 @@
 <br>
 
 {% endfor %}
+{% endblock content%}

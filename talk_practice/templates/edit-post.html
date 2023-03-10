@@ -1,6 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
 
     <button type="submit">Submit</button>
 </form>
+
+{% endblock content %}
+<!-- {% if request.user.is_staff %}
+{% endif %} syntax to check if user can edit or delete -->

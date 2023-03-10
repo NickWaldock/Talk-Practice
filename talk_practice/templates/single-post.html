@@ -1,12 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="heading-text">
+    <h1>
+        {{ post.title }}
+    </h1>
+</div>
+<div class="body-text">
+    <h4>
+        {{ post.subtitle }}
+    </h4>
+</div>
+<div class="text-muted py-2">
+    {{ post.author }}
+    <br>
+    {{ post.date_updated }}
+</div>
+<div class="body-text py-2 px-3">
+    {{ post.blog_content }}
+</div>
+    {% endblock content %}
 
 
-{{ post.title }}
-{{ post.subtitle }}
-{{ post.author }}
-{{ post.date_updated }}
-{{ post.blog_content }}
 
-{% endblock content %}
+
+    

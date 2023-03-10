@@ -1,6 +1,8 @@
 # Talk-Practice
  A forum site for musicians to discuss practice
 
+.venv activate command
+source .venv/bin/activate
 
 References
 Django crash course

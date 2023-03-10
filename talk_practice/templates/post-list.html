@@ -3,18 +3,27 @@
 {% block content %}
 
 {% for post in list %}
+
+<div class="">
     <a href="/single-post/{{ post.id }}/">
-        {{post.title}}  
+        <div class="heading-text">
+            {{post.title}}  
+        </div>
     </a>
-    <br>
-{{post.subtitle}}
+</div>
+
+
+<div class="text-muted body-text">
+    {{post.subtitle}}
+</div>
 <br>
 {{post.author}}
 <br>
 {{post.date_updated}}
-<br>
-{{post.blog_content}}
-<br>
+
+<div class="body-text">
+    {{post.blog_content}}
+</div>
 
 {% endfor %}
 {% endblock content%}

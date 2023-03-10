@@ -1,0 +1,26 @@
+/* font-family: 'Oxygen Mono', monospace; (font weight 400)
+font-family: 'Source Code Pro', monospace; (font weight ExtraLight 200, 
+                                            ExtraLight 200 Italic, SemiBold600 */
+
+
+.body-text {
+    font-family: 'Oxygen Mono', monospace;
+    font-weight: 400;
+}
+
+.heading-text {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+.logo-outer {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.logo-inner {
+    width: 12px;
+    height: 12px;
+
+}

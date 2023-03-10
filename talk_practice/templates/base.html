@@ -28,7 +28,6 @@
 </head>
 <body>
     <div class="container-fluid bg-dark">
-        
         <nav class="navbar navbar-expand-sm">
             <ul class="nav text-white body-text">
                 <li class="nav-item">
@@ -53,14 +52,19 @@
         </nav>
     </div>
 
+<!-- Main Body -->
+<div class="container-fluid">
+    <div class="row px-2">
+        <div class="col-8">
+            {% block content %}
+            <!-- written block "content" renders here -->
+            {% endblock content %}
+        </div>
+        <div class="col-4">
+            (Space for footer)
+        </div>
+    </div>
+</div>
 
-
-
-    {% block navbar %}
-    {% endblock navbar %}
-
-    {% block content %}
-    <!-- written block "content" renders here -->
-    {% endblock content %}
 </body>
 </html>

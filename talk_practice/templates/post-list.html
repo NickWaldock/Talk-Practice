@@ -3,26 +3,28 @@
 {% block content %}
 
 {% for post in list %}
-
-<div class="">
-    <a href="/single-post/{{ post.id }}/">
-        <div class="heading-text">
-            {{post.title}}  
+<div class="card pt-4">
+    <div class="card-body">
+        <a href="/single-post/{{ post.id }}/" class="text-decoration-none post-title">
+            <h1 class="heading-text card-title">
+                {{post.title}}  
+            </h1>
+        </a>
+        <div class="text-muted body-text card-subtitle">
+            <h4>
+                {{post.subtitle}}
+            </h4>
         </div>
-    </a>
-</div>
-
-
-<div class="text-muted body-text">
-    {{post.subtitle}}
-</div>
-<br>
-{{post.author}}
-<br>
-{{post.date_updated}}
-
-<div class="body-text">
-    {{post.blog_content}}
+        <div class="text-muted">
+            {{post.author}}
+        </div>
+        <div class="text-muted">
+            {{post.date_updated}}
+        </div>
+        <div class="body-text card-text p-3">
+            {{post.blog_content}}
+        </div>
+    </div>
 </div>
 
 {% endfor %}

@@ -24,3 +24,9 @@ font-family: 'Source Code Pro', monospace; (font weight ExtraLight 200,
     height: 12px;
 
 }
+
+
+/* Styling for posts in post view */
+.post-title {
+    color: black;
+}

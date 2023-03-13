@@ -27,9 +27,9 @@ from blog.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', post_list),
-    path('single-post/<pk>/', get_post),
-    path('create-post/', create_post),
-    path('single-post/<pk>/edit-post/', update_post),
-    path('single-post/<pk>/delete-post/', delete_post),
+    path('single-post/<pk>/', get_post, name='single-post'),
+    path('create-post/', create_post, name='create-post'),
+    path('single-post/<pk>/edit-post/', update_post, name='edit-post'),
+    path('single-post/<pk>/delete-post/', delete_post, name='delete'),
 ]
     

@@ -3,7 +3,7 @@ from .models import BlogPost
 from .forms import BlogPostForm
 
 
-# Create your views here.
+# View list of all posts
 def post_list(request):
     list = BlogPost.objects.all()
     context = {
@@ -11,7 +11,7 @@ def post_list(request):
     }
     return render(request, "post-list.html", context)
 
-
+# View a single post in full page
 def get_post(request, pk):
     post = BlogPost.objects.get(id=pk)
     context = {
@@ -19,7 +19,7 @@ def get_post(request, pk):
     }
     return render(request, "single-post.html", context)
 
-
+# Create a new post
 def create_post(request):
     form = BlogPostForm()
     if request.method == "POST":
@@ -33,7 +33,7 @@ def create_post(request):
     }
     return render(request, "create-post.html", context)
 
-
+# Update a post
 def update_post(request, pk):
     post = BlogPost.objects.get(id=pk)
     form = BlogPostForm(instance=post)
@@ -49,7 +49,7 @@ def update_post(request, pk):
     }
     return render(request, "edit-post.html", context)
 
-
+# Delete a post
 def delete_post(request, pk):
     post = BlogPost.objects.get(id=pk)
     post.delete()
